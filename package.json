@@ -1,12 +1,13 @@
 {
-  "name": "nodejs-ex",
+  "name": "carbonlog",
   "version": "0.0.1",
-  "description": "Node.js sample app for OpenShift 3",
+  "description": "for the lulz",
   "main": "server.js",
   "dependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
     "ejs": "^2.4.1",
+    "body-parser": "^1.8.1",
     "express": "^4.13.4",
     "mocha": "^2.4.5",
     "mongodb": "^2.1.16",
