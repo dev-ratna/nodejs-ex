@@ -1,5 +1,6 @@
 //  OpenShift sample Node application
 var express        =         require("express"),
+    morgan         =         require("morgan"),
     bodyParser     =         require("body-parser"),
     app            =         express();
     
@@ -61,8 +62,8 @@ var initDb = function(callback) {
 app.post('/log',function(req,res){
   var dip=req.body.ip;
   var dbrowser=req.body.browser;
-  var myobj = { name: "Company Inc", address: "Highway 37" };
-  dbo.collection("customers").insertOne(myobj, function(err, res) {
+  var myobj = { ip: dip, browser: dbrowser };
+  dbo.collection("logs").insertOne(myobj, function(err, res) {
     if (err) throw err;
     console.log("1 document inserted");
     db.close();
